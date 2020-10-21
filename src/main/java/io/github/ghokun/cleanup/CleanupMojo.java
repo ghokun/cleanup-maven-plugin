@@ -30,12 +30,17 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.jdt.core.IPackageFragmentRoot;
 
 /**
  * Goal which touches a timestamp file.
  */
 @Mojo(name = "cleanup", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
 public class CleanupMojo extends AbstractMojo {
+	
+	IJavaProject javaProject;
+	IPackageFragmentRoot sourceFolder;
 	
 	/**
 	 * Location of the file.
@@ -47,6 +52,8 @@ public class CleanupMojo extends AbstractMojo {
 	private boolean dryRun;
 	
 	public void execute() throws MojoExecutionException {
+
+
 		this.getLog().info(outputDirectory.getAbsolutePath());
 		this.getLog().info(outputDirectory.getAbsolutePath());
 	}

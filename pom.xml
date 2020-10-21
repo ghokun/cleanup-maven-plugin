@@ -93,6 +93,12 @@
       <version>${maven-project.version}</version>
       <scope>provided</scope>
     </dependency>
+    <!-- Eclipse -->
+    <dependency>
+      <groupId>org.eclipse.jdt</groupId>
+      <artifactId>org.eclipse.jdt.core</artifactId>
+      <version>3.23.0</version>
+    </dependency>
     <!-- Test -->
     <dependency>
       <groupId>junit</groupId>
